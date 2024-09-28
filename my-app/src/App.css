@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#formulario input, #formulario select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 150px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+/* Estilo dos Cards */
+.tarefa {
+  background-color: #f9f9f9; /* Cor de fundo dos cards */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #007bff; /* Borda colorida */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.tarefa:hover {
+  transform: translateY(-5px); /* Animação para destacar o card */
+}
+
+/* Cores para diferentes prioridades */
+.tarefa.prioridade-Alta {
+  border-left-color: #dc3545; /* Vermelho para alta prioridade */
+}
+
+.tarefa.prioridade-Média {
+  border-left-color: #ffc107; /* Amarelo para média prioridade */
+}
+
+.tarefa.prioridade-Baixa {
+  border-left-color: #28a745; /* Verde para baixa prioridade */
+}
+
+.tarefa .descricao {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.tarefa .botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Estilos dos botões de ação */
+.tarefa button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.tarefa button svg {
+  color: #007bff;
+}
+
+.tarefa button:hover svg {
+  color: #0056b3;
+}
+
+/* Estilo para tarefas concluídas */
+.completa {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
